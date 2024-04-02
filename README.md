@@ -3,7 +3,7 @@
 ### Notions importantes
 <img src="./src/images/registres.png"/>
 
-**Leçon 1 : Hello world!**
+**Leçon 1 : Hello world!**\n
 1 - Crée un fichier `.asm` en faisant par exemple `touch helloworld.asm`
 2 - Mettre un programme ex :
 
