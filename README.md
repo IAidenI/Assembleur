@@ -27,5 +27,5 @@ _start:
 	int 0x80 ; Apelle le noyau pour exécuter le sys_exit
 ```
   
-3 - Pour assembler le fichier source `helloworld.asm` en utilisant le format de sortie obj et produit un fichier objet `helloworld.o` : `$nasm -f elf32 helloworld.asm -o helloworld.o`  
+3 - Pour assembler le fichier source `helloworld.asm` en utilisant le format de sortie obj et produit un fichier objet `helloworld.o` : `nasm -f elf32 helloworld.asm -o helloworld.o`  
 4 - On assemble le fichier objet en utilisant l'architecture x86 et gener un exécutable : `ld -m elf_i386 helloworld.o -o helloworld`  
