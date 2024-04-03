@@ -10,6 +10,7 @@
 ```asm
 section .data
 	message db 'Hello world!', 0xA ; création d'un message à afficher à l'écran, ici 'Hello world!' que l'on vient stocker dans message et 0xA permet d'ajouter un retour à la ligne plus ou moins équivalent à message = 'Hello world!\n'
+	messageLen db equ $-message ; Calcul la longueur de la chaîne
 
 section .text
 	global _start ; Déclare la section de code, global déclare l'étiquette _start comme point d'entré du programme, un peut comme un apelle de fonction du genre : int main() { _sart(); }
@@ -18,7 +19,7 @@ _start:
 	mov eax, 4 ; Apelle du syscall 4 qui correspond à sys_write voir https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_32.tbl pour plus d'infos
 	mov ebx, 1 ; Charge le stdout dans 
 	mov ecx, message ; Charge l'adresse de message dans l'ecx
-	mov edx, 14 ; Charge la longeur de la châine dans edx
+	mov edx, messageLen ; Charge la longeur de la châine dans edx
 	int 0x80 ; Apelle le noyau pour effectuer l'appelle au syscall sys_write
 
   ; Sortie propre du programme
