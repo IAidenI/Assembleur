@@ -30,6 +30,8 @@ _start:
   
 3 - Pour assembler le fichier source `helloworld.asm` en utilisant le format de sortie obj et produit un fichier objet `helloworld.o` : `nasm -f elf32 helloworld.asm -o helloworld.o`  
 4 - On assemble le fichier objet en utilisant l'architecture x86 et gener un exécutable : `ld -m elf_i386 helloworld.o -o helloworld`  
+5 - Résultat :  
+<img src="./src/images/HelloWorld.png"/>  
 
 #### Leçon 2 : Saisie utilisateur
 1 - Crée un fichier `.asm` en faisant par exemple `touch user.asm`  
@@ -106,6 +108,9 @@ Assemble:
 	nasm -f elf32 $(FILE).asm -o $(FILE).o
 	ld -m elf_i386 -o $(FILE) $(FILE).o
 ```
+4 - Résultat :  
+<img src="./src/images/UserInput.png"/>  
+
 #### Leçon 3 : Premier programme
 1 - Crée un fichier `.asm` en faisant par exemple `touch auth.asm`  
 2 - Mettre un programme ex :  
@@ -272,3 +277,5 @@ Assemble:
 	nasm -f elf32 $(FILE).asm -o $(FILE).o
 	ld -m elf_i386 -o $(FILE) $(FILE).o
 ```
+4 - Résultat :  
+<img src="./src/images/FirstProg.png"/>  
